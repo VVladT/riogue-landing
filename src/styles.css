@@ -1,57 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
 @theme {
-  /* Cobalt Blue */
-  --color-cobalt-50:  #e3ebf7;
-  --color-cobalt-100: #c0d0ef;
-  --color-cobalt-200: #96b3e5;
-  --color-cobalt-300: #6b95db;
-  --color-cobalt-400: #447cd3;
-  --color-cobalt-500: #074382;
-  --color-cobalt-600: #063872;
-  --color-cobalt-700: #052e61;
-  --color-cobalt-800: #042551;
-  --color-cobalt-900: #031b40;
-  --color-cobalt-950: #020f2b;
+    /* Cobalt Blue */
+    --color-cobalt-50: #e3ebf7;
+    --color-cobalt-100: #c0d0ef;
+    --color-cobalt-200: #96b3e5;
+    --color-cobalt-300: #6b95db;
+    --color-cobalt-400: #447cd3;
+    --color-cobalt-500: #074382;
+    --color-cobalt-600: #063872;
+    --color-cobalt-700: #052e61;
+    --color-cobalt-800: #042551;
+    --color-cobalt-900: #031b40;
+    --color-cobalt-950: #020f2b;
 
-  /* Lime Green */
-  --color-lime-50:  #f3f7d9;
-  --color-lime-100: #e0ed9f;
-  --color-lime-200: #c6e260;
-  --color-lime-300: #a8d825;
-  --color-lime-400: #95cd00;
-  --color-lime-500: #B0CA11;
-  --color-lime-600: #94b200;
-  --color-lime-700: #7b9500;
-  --color-lime-800: #607600;
-  --color-lime-900: #475a00;
-  --color-lime-950: #2e3e00;
+    /* Lime Green */
+    --color-lime-50: #f3f7d9;
+    --color-lime-100: #e0ed9f;
+    --color-lime-200: #c6e260;
+    --color-lime-300: #a8d825;
+    --color-lime-400: #95cd00;
+    --color-lime-500: #B0CA11;
+    --color-lime-600: #94b200;
+    --color-lime-700: #7b9500;
+    --color-lime-800: #607600;
+    --color-lime-900: #475a00;
+    --color-lime-950: #2e3e00;
 
-  /* Golden Yellow */
-  --color-golden-50:  #fff8d9;
-  --color-golden-100: #fff0b3;
-  --color-golden-200: #ffe680;
-  --color-golden-300: #ffda4d;
-  --color-golden-400: #ffd11a;
-  --color-golden-500: #F6C905;
-  --color-golden-600: #e0b200;
-  --color-golden-700: #c19900;
-  --color-golden-800: #a08000;
-  --color-golden-900: #846600;
-  --color-golden-950: #5c4400;
+    /* Golden Yellow */
+    --color-golden-50: #fff8d9;
+    --color-golden-100: #fff0b3;
+    --color-golden-200: #ffe680;
+    --color-golden-300: #ffda4d;
+    --color-golden-400: #ffd11a;
+    --color-golden-500: #F6C905;
+    --color-golden-600: #e0b200;
+    --color-golden-700: #c19900;
+    --color-golden-800: #a08000;
+    --color-golden-900: #846600;
+    --color-golden-950: #5c4400;
 
-  /* Colors by function */
-  --color-primary: var(--color-cobalt-500);
-  --color-secondary: var(--color-golden-400);
-  --color-highlight: var(--color-lime-300);
-  --color-light: var(--color-gray-100);
-  --color-dark: var(--color-gray-900);
+    /* Colors by function */
+    --color-primary: var(--color-cobalt-500);
+    --color-secondary: var(--color-golden-400);
+    --color-highlight: var(--color-lime-300);
+    --color-light: var(--color-gray-100);
+    --color-dark: var(--color-gray-900);
 
-  /* Fonts */
-  --font-primary: "League Spartan", "Arial Black", "Arial Bold", Helvetica, sans-serif;
-  --font-secondary: "Noto Sans", Arial, Helvetica, sans-serif;
+    /* Fonts */
+    --font-primary: "League Spartan", "Arial Black", "Arial Bold", Helvetica, sans-serif;
+    --font-secondary: "Noto Sans", Arial, Helvetica, sans-serif;
 }
 
 /* GLOBAL STYLES */
@@ -59,31 +58,85 @@
     body {
         @apply bg-light text-dark font-secondary leading-relaxed;
     }
-    
+
     h1 {
         @apply text-4xl font-bold font-primary;
     }
+
     h2 {
         @apply text-3xl font-semibold font-primary;
     }
+
     h3 {
         @apply text-2xl font-semibold font-primary;
     }
+
     h4 {
         @apply text-xl font-semibold font-primary;
     }
+
     h5 {
         @apply text-lg font-semibold font-primary;
     }
+
     h6 {
         @apply text-base font-semibold font-primary;
     }
-    
+
     p {
         @apply text-base;
     }
-    
+
     img {
         @apply max-w-full h-auto;
+    }
+
+    ng-icon {
+        @apply text-current;
+    }
+}
+
+@utility underline-* {
+    position: relative;
+    width: fit-content;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: --value(--color-*);
+    }
+}
+
+@utility underline-transition-* {
+    &::after {
+        transition: transform --value([*]) ease-in-out;
+    }
+}
+
+@utility underline-scale-x-* {
+    &::after {
+        transform: scaleX(--value(integer));
+    }
+}
+
+@utility underline-scale-y-* {
+    &::after {
+        transform: scaleY(--value(integer));
+    }
+}
+
+@utility underline-origin-* {
+    &::after {
+        transform-origin: --value("left", "right", "center", "top", "bottom");
+    }
+}
+
+@utility underline-space {
+    &::after {
+        top: calc(100% + 0.25rem);
     }
 }

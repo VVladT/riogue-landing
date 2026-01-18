@@ -1,1 +1,37 @@
-<p>header works!</p>
+@let isWhite = variant() === 'white';
+
+<div class="container mx-auto flex justify-between items-center p-4">
+  <a [routerLink]="''" class="focus:outline-none">
+    <img [src]="isWhite ? 'images/logo-blue.svg' : 'images/logo.svg'">
+  </a>
+
+  <nav class="hidden md:block">
+    <ul class="nav-list">
+      <li><a [routerLink]="'xd'" class="nav-item">Inicio</a></li>
+      <li><a [routerLink]="'xd'" class="nav-item">Servicios</a></li>
+      <li><a [routerLink]="'xd'" class="nav-item">Productos</a></li>
+      <li><a [routerLink]="'xd'" class="nav-item">Nosotros</a></li>
+      <li><a [routerLink]="'xd'" class="nav-item">Certificados</a></li>
+      <li><a [routerLink]="'xd'" class="nav-item">Contáctanos</a></li>
+    </ul>
+  </nav>
+
+  <div class="md:hidden">
+    <button class="burguer" (click)="toggleSidebar()">
+      <ng-icon [svg]="icon()" class="text-3xl"></ng-icon>
+    </button>
+  </div>
+</div>
+
+@if (sidebarOpen()) {
+<nav class="mobile-nav-list">
+  <ul class="flex flex-col">
+    <li><a href="#" class="mobile-nav-item">Inicio</a></li>
+    <li><a href="#" class="mobile-nav-item">Servicios</a></li>
+    <li><a href="#" class="mobile-nav-item">Productos</a></li>
+    <li><a href="#" class="mobile-nav-item">Nosotros</a></li>
+    <li><a href="#" class="mobile-nav-item">Certificados</a></li>
+    <li><a href="#" class="mobile-nav-item">Contáctanos</a></li>
+  </ul>
+</nav>
+}
