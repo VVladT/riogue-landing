@@ -1,3 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "tailwindcss";
+
+@theme {
+  /* Cobalt Blue */
+  --color-cobalt-50:  #e3ebf7;
+  --color-cobalt-100: #c0d0ef;
+  --color-cobalt-200: #96b3e5;
+  --color-cobalt-300: #6b95db;
+  --color-cobalt-400: #447cd3;
+  --color-cobalt-500: #074382;
+  --color-cobalt-600: #063872;
+  --color-cobalt-700: #052e61;
+  --color-cobalt-800: #042551;
+  --color-cobalt-900: #031b40;
+  --color-cobalt-950: #020f2b;
+
+  /* Lime Green */
+  --color-lime-50:  #f3f7d9;
+  --color-lime-100: #e0ed9f;
+  --color-lime-200: #c6e260;
+  --color-lime-300: #a8d825;
+  --color-lime-400: #95cd00;
+  --color-lime-500: #B0CA11;
+  --color-lime-600: #94b200;
+  --color-lime-700: #7b9500;
+  --color-lime-800: #607600;
+  --color-lime-900: #475a00;
+  --color-lime-950: #2e3e00;
+
+  /* Golden Yellow */
+  --color-golden-50:  #fff8d9;
+  --color-golden-100: #fff0b3;
+  --color-golden-200: #ffe680;
+  --color-golden-300: #ffda4d;
+  --color-golden-400: #ffd11a;
+  --color-golden-500: #F6C905;
+  --color-golden-600: #e0b200;
+  --color-golden-700: #c19900;
+  --color-golden-800: #a08000;
+  --color-golden-900: #846600;
+  --color-golden-950: #5c4400;
+}
