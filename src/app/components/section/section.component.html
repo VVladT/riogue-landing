@@ -1,0 +1,13 @@
+@if (hasTitle() || hasDescription()) {
+    <div class="text-center mt-12 mb-8 md:w-4/5 mx-auto">
+        @if (hasTitle()) {
+            <h1>{{title()}}</h1>
+        }
+        <hr class="border-t-2 border-dashed mt-1 mb-4">
+        @if (hasDescription()) {
+            <p class="text-xl">{{description()}}</p>
+        }
+    </div>
+}
+
+<ng-content></ng-content>
