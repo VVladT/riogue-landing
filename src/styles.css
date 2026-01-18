@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 @theme {
   /* Cobalt Blue */
   --color-cobalt-50:  #e3ebf7;
@@ -39,4 +41,49 @@
   --color-golden-800: #a08000;
   --color-golden-900: #846600;
   --color-golden-950: #5c4400;
+
+  /* Colors by function */
+  --color-primary: var(--color-cobalt-500);
+  --color-secondary: var(--color-golden-400);
+  --color-highlight: var(--color-lime-300);
+  --color-light: var(--color-gray-100);
+  --color-dark: var(--color-gray-900);
+
+  /* Fonts */
+  --font-primary: "League Spartan", "Arial Black", "Arial Bold", Helvetica, sans-serif;
+  --font-secondary: "Noto Sans", Arial, Helvetica, sans-serif;
+}
+
+/* GLOBAL STYLES */
+@layer base {
+    body {
+        @apply bg-light text-dark font-secondary leading-relaxed;
+    }
+    
+    h1 {
+        @apply text-4xl font-bold font-primary;
+    }
+    h2 {
+        @apply text-3xl font-semibold font-primary;
+    }
+    h3 {
+        @apply text-2xl font-semibold font-primary;
+    }
+    h4 {
+        @apply text-xl font-semibold font-primary;
+    }
+    h5 {
+        @apply text-lg font-semibold font-primary;
+    }
+    h6 {
+        @apply text-base font-semibold font-primary;
+    }
+    
+    p {
+        @apply text-base;
+    }
+    
+    img {
+        @apply max-w-full h-auto;
+    }
 }
