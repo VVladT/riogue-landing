@@ -3,29 +3,33 @@
     [title]="'Nuestros Servicios'"
     [description]="'Unimos el mundo digital con la seguridad física. Desde el soporte y venta de tu equipo informático hasta la instalación de redes cableadas y sistemas de alarma, ofrecemos la solución tecnológica completa para tu hogar o negocio. Su tecnología, en las mejores manos.'"
 >
-    <h1>Esto es contenido interno de la sección</h1>
+    <app-slider [itemsPerView]="3" [stepSize]="1">
+        <app-card-overlay #sliderItem class="p-5 flex justify-center">
+            <h2 class="text-center font-secondary uppercase">Soluciones de Internet</h2>
+        </app-card-overlay>
+        <app-card-overlay #sliderItem class="p-5 flex justify-center">
+            <h2 class="text-center font-secondary uppercase">Cableado Estructurado de datos, audio y video</h2>
+        </app-card-overlay>
+        <app-card-overlay #sliderItem class="p-5 flex justify-center">
+            <h2 class="text-center font-secondary uppercase">Implementación de cámaras de video</h2>
+        </app-card-overlay>
+        <app-card-overlay #sliderItem class="p-5 flex justify-center">
+            <h2 class="text-center font-secondary uppercase">Implementación de sistemas de alarmas</h2>
+        </app-card-overlay>
+        <app-card-overlay #sliderItem class="p-5 flex justify-center">
+            <h2 class="text-center font-secondary uppercase">Instalación de racks para sistemas de audio y video</h2>
+        </app-card-overlay>
+        <app-card-overlay #sliderItem class="p-5 flex justify-center">
+            <h2 class="text-center font-secondary uppercase">Reparación y mantenimiento de hardware y software</h2>
+        </app-card-overlay>
+        <app-card-overlay #sliderItem class="p-5 flex justify-center">
+            <h2 class="text-center font-secondary uppercase">Implementación de cerco eléctrico y pozo a tierra</h2>
+        </app-card-overlay>
+    </app-slider>
 </section>
-<app-slider [itemsPerView]="3" [stepSize]="1">
-    <app-card-overlay #sliderItem class="p-5">
-        <h2 class="text-center font-secondary uppercase">Soluciones de Internet</h2>
-    </app-card-overlay>
-    <app-card-overlay #sliderItem class="p-5">
-        <h2 class="text-center font-secondary uppercase">Cableado Estructurado de datos, audio y video</h2>
-    </app-card-overlay>
-    <app-card-overlay #sliderItem class="p-5">
-        <h2 class="text-center font-secondary uppercase">Implementación de cámaras de video</h2>
-    </app-card-overlay>
-    <app-card-overlay #sliderItem class="p-5">
-        <h2 class="text-center font-secondary uppercase">Implementación de sistemas de alarmas</h2>
-    </app-card-overlay>
-    <app-card-overlay #sliderItem class="p-5">
-        <h2 class="text-center font-secondary uppercase">Instalación de racks para sistemas de audio y video</h2>
-    </app-card-overlay>
-    <app-card-overlay #sliderItem class="p-5">
-        <h2 class="text-center font-secondary uppercase">Reparación y mantenimiento de hardware y software</h2>
-    </app-card-overlay>
-    <app-card-overlay #sliderItem class="p-5">
-        <h2 class="text-center font-secondary uppercase">Implementación de cerco eléctrico y pozo a tierra</h2>
-    </app-card-overlay>
-</app-slider>
-<app-brands [brands]="store.brands()"></app-brands>
+<section app-section
+    [title]="'Nuestros Clientes'"
+    [description]="'Nuestra experiencia ha sido apreciada por grandes clientes de diversos rubros'"
+>
+    <app-brands [brands]="store.brands()"></app-brands>
+</section>
