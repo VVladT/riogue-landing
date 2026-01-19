@@ -34,13 +34,31 @@
 
         <div class="">
             <h5 class="md:mb-6 mb-2">Contáctanos</h5>
-            <ul>
-                <li><a [routerLink]="['/']">Inicio</a></li>
-                <li><a [routerLink]="['/']">Servicios</a></li>
-                <li><a [routerLink]="['/']">Productos</a></li>
-                <li><a [routerLink]="['/']">Nosotros</a></li>
-                <li><a [routerLink]="['/']">Certificados</a></li>
-                <li><a [routerLink]="['/']">Contáctanos</a></li>
+            <ul class="flex flex-col gap-2">
+                <li class="flex gap-2">
+                    <ng-icon name="ionLocationOutline" class="text-xl"></ng-icon>
+                    <div class="flex flex-col">
+                        <p>Cal. Sin Nombre Mza. J Lote. 12</p>
+                        <p>U.v. Pedro Ruiz Gallo  Prov. Const. del Callao</p>
+                        <p>Prov. Const. del Callao - Callao</p>
+                        <p>Mza. B Lote. 10 A.h. Las Malvinas - Tumbes</p>
+                    </div>
+                </li>
+                <li class="flex gap-2">
+                    <ng-icon name="ionCallOutline" class="text-xl"></ng-icon>
+                    <div class="flex flex-col">
+                        <p>976573347</p>
+                        <p>981951590</p>
+                        <p>999668835</p>
+                    </div>
+                </li>
+                <li class="flex gap-2">
+                    <ng-icon name="ionMailOutline" class="text-xl"></ng-icon>
+                    <div class="flex flex-col">
+                        <p>riogue.23@gmail.com</p>
+                        <p>soporteonside@gmail.com</p>
+                    </div>
+                </li>
             </ul>
         </div>
     
