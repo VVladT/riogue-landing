@@ -20,7 +20,7 @@ export class MarqueeComponent {
       const content = this.content().nativeElement;
       
       const width = content.clientWidth;
-      track.style.setProperty('--marquee-width', `${width}px`);
+      track.style.setProperty('--marquee-width', `-${width}px`);
       
       const child = track.children[0];
       const clone = child.cloneNode(true);

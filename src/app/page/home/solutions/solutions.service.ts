@@ -31,7 +31,7 @@ export class SolutionsService {
     {
       name: 'Instalación de racks para sistemas de audio y video',
       description: '',
-      imgUrl: `${this.basePath}/instalacion-racks.jpg`
+      imgUrl: `${this.basePath}/estructuras-metalicas.jpg`
     },
     {
       name: 'Reparación y Mantenimiento de Hardware y Software',

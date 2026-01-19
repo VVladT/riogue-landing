@@ -33,13 +33,13 @@
 
     &.blue {
         @apply bg-primary;
-        
+
         .nav-item {
             @apply underline-yellow-300 text-gray-300 hover:text-gray-50 focus:text-gray-50;
         }
 
         .burguer {
-            @apply  text-gray-300 hover:text-gray-50 focus:text-gray-50
+            @apply text-gray-300 hover:text-gray-50 focus:text-gray-50
             hover:bg-cobalt-700 focus:bg-cobalt-700;
         }
 
@@ -60,46 +60,51 @@
     }
 }
 
+/* Reutilización de clases comunes */
 .nav-list {
     @apply flex space-x-6 font-medium;
-    
-    .nav-item {
-        @apply focus:outline-none transition-colors cursor-pointer underline-space
-        underline-scale-x-0 underline-origin-right underline-transition-[300ms]
-        hover:underline-scale-x-1 hover:underline-origin-left
-        focus:underline-scale-x-1 focus:underline-origin-left;
-    }
+}
+
+.nav-item {
+    @apply focus:outline-none transition-colors cursor-pointer underline-space
+    underline-scale-x-0 underline-origin-right underline-transition-[300ms]
+    hover:underline-scale-x-1 hover:underline-origin-left
+    focus:underline-scale-x-1 focus:underline-origin-left;
 }
 
 .burguer {
     @apply focus:outline-none flex cursor-pointer rounded p-1;
 }
 
+/* Estilos de Mobile */
 .mobile-nav-list {
     @apply md:hidden inset-shadow-sm;
+}
 
-    .mobile-nav-item {
-        @apply block relative text-center px-4 py-2 text-gray-700 font-bold
-        hover:font-black hover:text-gray-900 focus:text-gray-900 focus:outline-none;
+.mobile-nav-item {
+    @apply block relative text-center px-4 py-2 text-gray-700 font-bold
+    hover:font-black hover:text-gray-900 focus:text-gray-900 focus:outline-none;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            transition: all 0.2s ease-in-out;
-        }
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+        transition: all 0.2s ease-in-out;
+    }
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 0;
-            height: 100%;
-            transition: all 0.2s ease-in-out;
+    &::before {
+        left: 0;
+    }
+
+    &::after {
+        right: 0;
+    }
+
+    &:hover, &:focus {
+        &::before, &::after {
+            width: 5px;
         }
     }
 }
