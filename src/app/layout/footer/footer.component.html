@@ -1,8 +1,8 @@
 <div class=" bg-primary flex flex-col lg:flex-row gap-y-6 md:gap-y-0 text-white px-12 py-8">
     <div class="flex-2 px-3 flex flex-col">
-        <div class="mb-5"> 
-            <h5>Redes sociales</h5>
-            <div class="flex gap-2">
+        <div class="mb-5 sm:mx-0 mx-auto"> 
+            <h5 class=" md:text-md text-2xl">Redes sociales</h5>
+            <div class="flex gap-2 sm:justify-start justify-center">
                 <a href="https://www.facebook.com/" class="flex items-center justify-center px-1">
                     <ng-icon name="ionLogoFacebook" class="text-3xl"></ng-icon>
                 </a>
@@ -19,9 +19,9 @@
         
     </div>
 
-    <div class="flex-3 flex flex-row sm:justify-around justify-between">
-        <div class="">
-            <h5 class="md:mb-6 mb-2">Explora</h5>
+    <div class="flex-3 flex sm:flex-row flex-col sm:justify-around justify-between gap-y-8">
+        <div class="sm:mx-2 mx-auto">
+            <h5 class="md:mb-6 mb-2 md:text-md text-2xl">Explora</h5>
             <ul>
                 <li><a [routerLink]="['/']">Inicio</a></li>
                 <li><a [routerLink]="['/']">Servicios</a></li>
@@ -32,8 +32,8 @@
             </ul>
         </div>
 
-        <div class="">
-            <h5 class="md:mb-6 mb-2">Contáctanos</h5>
+        <div class="sm:mx-2 mx-auto">
+            <h5 class="md:mb-6 mb-2 md:text-md text-2xl text-center">Contáctanos</h5>
             <ul class="flex flex-col gap-2">
                 <li class="flex gap-2">
                     <ng-icon name="ionLocationOutline" class="text-xl"></ng-icon>
