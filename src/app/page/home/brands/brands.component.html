@@ -1,0 +1,10 @@
+<app-marquee [speed]="100">
+    <div class="flex" #content>
+        @for (brand of brands(); track $index) {
+            <img class="object-contain mx-6" [class.ml-3]="$index === 0"
+            [class.mr-3]="$index === brands().length - 1"
+             draggable="false"
+            [src]="brand.logoUrl" [alt]="brand.name"/>
+        }
+    </div>
+</app-marquee>

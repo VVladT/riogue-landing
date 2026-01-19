@@ -1,0 +1,11 @@
+<div class="slider-container">
+    <div class="slider-fade left" [ngClass]="{'disabled': currentIndex() <= 0}" (click)="prev()"></div>
+
+    <div class="slider-fade right" [ngClass]="{'disabled': currentIndex() >= maxIndex()}" (click)="next()"></div>
+
+    <div class="slider-viewport" [ngClass]="'w-['+ widthPercent +'%]'">
+        <div class="slider-track" [style.transform]="'translateX(-'+translateX()+'%)'">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

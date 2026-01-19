@@ -1,0 +1,14 @@
+.container {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    max-width: fit-content;
+    max-height: fit-content;
+    clip-path: polygon(0 0, 0 80%, 50% 100%, 100% 80%, 100% 0);
+}
+
+img {
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+}

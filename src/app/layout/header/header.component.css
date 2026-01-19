@@ -1,7 +1,7 @@
 @reference "#app.css";
 
 :host {
-    @apply w-full shadow-md;
+    @apply w-full shadow-md sticky top-0 z-50;
 
     &.white {
         @apply bg-white;

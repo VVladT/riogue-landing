@@ -1,0 +1,9 @@
+<div class="overflow-hidden w-full relative max-w-5xl mx-auto select-none">
+    <div class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-linear-to-r from-light to-transparent"></div>
+
+    <div #marqueeTrack class="marquee-inner flex will-change-transform min-w-[200%]" [style.animation-duration]="duration()+'s'">
+        <ng-content></ng-content>
+    </div>
+
+    <div class="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-linear-to-l from-light to-transparent"></div>
+</div>

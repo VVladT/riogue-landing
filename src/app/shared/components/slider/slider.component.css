@@ -1,0 +1,41 @@
+@reference "#app.css";
+
+.slider-container {
+    @apply flex items-center relative;
+}
+
+.slider-viewport {
+    @apply overflow-hidden w-full my-0 mx-auto;
+}
+
+.slider-track {
+    @apply flex;
+    transition: transform 0.3s ease;
+}
+
+.slider-fade {
+  @apply absolute top-0 h-full w-[20%] z-20
+  duration-300;
+
+  &:not(.disabled) {
+    @apply cursor-pointer pointer-events-auto;
+
+    &.left, &.right {
+      @apply hover:from-cobalt-900/50;
+    }
+  }
+  
+  &.disabled {
+    &.left, &.right {
+      @apply from-light/30;
+    }
+  }
+  
+  &.left {
+    @apply left-0 bg-linear-to-r from-light to-transparent;
+  }
+  
+  &.right {
+    @apply right-0 bg-linear-to-l from-light to-transparent;
+  }
+}
