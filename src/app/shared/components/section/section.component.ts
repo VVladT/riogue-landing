@@ -7,11 +7,11 @@ import { Component, computed, input } from '@angular/core';
   styleUrl: './section.component.css',
 })
 export class SectionComponent {
- title = input<string | null>(null);
+ sectionTitle = input<string | null>(null);
  description = input<string | null>(null);
 
- hasTitle = computed(() => {
-  return !!this.title()?.trim();
+ hassectionTitle = computed(() => {
+  return !!this.sectionTitle()?.trim();
  });
 
  hasDescription = computed(() => {

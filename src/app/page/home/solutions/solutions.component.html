@@ -1,4 +1,4 @@
-<section app-section [title]="title()" [description]="description()">
+<section app-section [sectionTitle]="solutionsTitle()" [description]="description()">
     <app-slider [stepSize]="1" [itemsPerView]="itemsPerView()">
         @for (solution of solutions(); track $index) {
             <app-card-overlay #sliderItem class="p-5 flex justify-center"

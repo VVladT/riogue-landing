@@ -1,10 +1,10 @@
 <app-hero></app-hero>
-<app-solutions title="Nuestros Servicios"
+<app-solutions solutionsTitle="Nuestros Servicios"
     description="Unimos el mundo digital con la seguridad física. Desde el soporte y venta de tu equipo informático hasta la instalación de redes cableadas y sistemas de alarma, ofrecemos la solución tecnológica completa para tu hogar o negocio. Su tecnología, en las mejores manos."
     [itemsPerView]="itemsPerView()" [solutions]="store.solutions()"
 />
 <!-- <section app-section
-    [title]="'Nuestros Servicios'"
+    [sectionTitle]="'Nuestros Servicios'"
     [description]="'Unimos el mundo digital con la seguridad física. Desde el soporte y venta de tu equipo informático hasta la instalación de redes cableadas y sistemas de alarma, ofrecemos la solución tecnológica completa para tu hogar o negocio. Su tecnología, en las mejores manos.'"
 >
     <app-slider [itemsPerView]="3" [stepSize]="1">
@@ -32,7 +32,7 @@
     </app-slider>
 </section> -->
 <section app-section
-    [title]="'Nuestros Clientes'"
+    [sectionTitle]="'Nuestros Clientes'"
     [description]="'Nuestra experiencia ha sido apreciada por grandes clientes de diversos rubros'"
 >
     <app-brands [brands]="store.brands()"></app-brands>
