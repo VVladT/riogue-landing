@@ -1,0 +1,11 @@
+<section app-section [title]="title()" [description]="description()">
+    <app-slider [stepSize]="1" [itemsPerView]="itemsPerView()">
+        @for (solution of solutions(); track $index) {
+            <app-card-overlay #sliderItem class="p-5 flex justify-center"
+                [imgSrc]="solution.imgUrl" [imgAlt]="solution.name"
+            >
+                <h2 class="h4 text-light text-center font-secondary uppercase">{{ solution.name }}</h2>
+            </app-card-overlay>
+        }
+    </app-slider>
+</section>

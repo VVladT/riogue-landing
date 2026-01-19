@@ -16,21 +16,25 @@ export class SliderComponent {
   widthPercent = input(100);
   currentIndex = signal(0);
 
+  showedItems = computed(() => 
+    Math.max(this.itemsPerView(), 1)
+  );
+
   items = contentChildren('sliderItem', { descendants: true, read: ElementRef});
 
   totalItems = computed(() => this.items().length);
   translateX = computed(() => {
-    const percentPerItem = 100 / this.itemsPerView();
+    const percentPerItem = 100 / this.showedItems();
     return this.currentIndex() * percentPerItem;
   });
 
   maxIndex = computed(() =>
-    Math.max(0, this.totalItems() - this.itemsPerView())
+    Math.max(0, this.totalItems() - this.showedItems())
   );
 
   constructor(renderer: Renderer2) {
     effect(() => {
-      const width = 100 / this.itemsPerView();
+      const width = 100 / this.showedItems();
       this.items().forEach(item => {
         renderer.setStyle(item.nativeElement, 'flex', `0 0 ${width}%`);
         renderer.setStyle(item.nativeElement, 'max-width', `${width}%`);

@@ -59,32 +59,53 @@
         @apply bg-light text-dark font-secondary leading-relaxed;
     }
 
-    h1 {
-        @apply text-4xl font-bold font-primary;
+    h1, .h1 {
+        @apply text-2xl font-bold font-primary;
+        @apply sm:text-3xl;
+        @apply md:text-4xl;
+        @apply lg:text-5xl;
     }
 
-    h2 {
-        @apply text-3xl font-semibold font-primary;
-    }
-
-    h3 {
-        @apply text-2xl font-semibold font-primary;
-    }
-
-    h4 {
+    h2, .h2 {
         @apply text-xl font-semibold font-primary;
+        @apply sm:text-2xl;
+        @apply md:text-3xl;
+        @apply lg:text-4xl;
     }
 
-    h5 {
+    h3, .h3 {
         @apply text-lg font-semibold font-primary;
+        @apply sm:text-xl;
+        @apply md:text-2xl;
+        @apply lg:text-3xl;
     }
 
-    h6 {
+    h4, .h4 {
         @apply text-base font-semibold font-primary;
+        @apply sm:text-lg;
+        @apply md:text-xl;
+        @apply lg:text-2xl;
+    }
+
+    h5, .h5 {
+        @apply text-sm font-semibold font-primary;
+        @apply sm:text-base;
+        @apply md:text-lg;
+        @apply lg:text-xl;
+    }
+
+    h6, .h6 {
+        @apply text-xs font-semibold font-primary;
+        @apply sm:text-sm;
+        @apply md:text-base;
+        @apply lg:text-lg;
     }
 
     p {
-        @apply text-base;
+        @apply text-xs;
+        @apply sm:text-sm;
+        @apply md:text-base;
+        @apply lg:text-lg;
     }
 
     img {

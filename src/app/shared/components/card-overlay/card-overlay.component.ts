@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-card-overlay',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './card-overlay.component.css',
 })
 export class CardOverlayComponent {
-
+  imgSrc = input("")
+  imgAlt = input("")
 }
