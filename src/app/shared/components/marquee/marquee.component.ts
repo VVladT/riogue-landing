@@ -18,12 +18,24 @@ export class MarqueeComponent {
     effect(() => {
       const track = this.track().nativeElement;
       const content = this.content().nativeElement;
-
+      
       const width = content.clientWidth;
-      track.style.setProperty('--marquee-width', `${width}px`);
-
+      track.style.setProperty('--marquee-width', `-${width}px`);
+      
       const child = track.children[0];
       const clone = child.cloneNode(true);
+      
+      /*
+      const images = clone.querySelectorAll('img');
+      const originalImages = child.querySelectorAll('img');
+      
+      for (let i = 0; i < originalImages.length; i++) {
+        const img = originalImages[i];
+        const clonedImg = images[i];
+        
+        console.log(img.src,clonedImg.src);
+      }
+      */
       renderer.appendChild(track, clone);
     });
   }
