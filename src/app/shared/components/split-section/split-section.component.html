@@ -1,0 +1,17 @@
+<div class="flex w-full aspect-[5/2]" [class.flex-row-reverse]="imgOnRight()">
+    <div class="w-1/2">
+        <img
+            [src]="imgSrc()"
+            [alt]="imgAlt()"
+            class="h-full object-cover">
+    </div>
+
+    <div class="w-1/2 flex flex-col justify-center items-center text-center gap-2 px-12 bg-white">
+        <h1>
+            {{splitSectionTitle()}}
+        </h1>
+        <p>
+            {{description()}}
+        </p>
+    </div>
+</div>

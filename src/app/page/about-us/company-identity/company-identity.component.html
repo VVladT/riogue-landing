@@ -1,0 +1,11 @@
+<div class="flex flex-col my-4">
+    @for (identity of identityList(); track $index) {
+        <app-split-section
+            [splitSectionTitle]="identity.name"
+            [description]="identity.description"
+            [imgSrc]="identity.imgUrl"
+            [imgAlt]="identity.name"
+            [imgOnRight]="identity.imgOnRight"
+        ></app-split-section>
+    }
+</div>
