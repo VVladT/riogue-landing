@@ -3,10 +3,13 @@ import { HeroComponent } from "./hero/hero.component";
 import { BrandsComponent } from "./brands/brands.component";
 import { HomeStore } from './home.store';
 import { SolutionsComponent } from "./solutions/solutions.component";
+// import { SectionComponent } from "@shared/components/section/section.component";
 
 @Component({
   selector: 'app-home',
-  imports: [HeroComponent, BrandsComponent, SolutionsComponent],
+  imports: [HeroComponent, BrandsComponent, SolutionsComponent,
+    // SectionComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   providers: [HomeStore],

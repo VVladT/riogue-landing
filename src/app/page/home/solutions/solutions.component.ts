@@ -11,7 +11,7 @@ import { Solutions } from './solutions.model';
   styleUrl: './solutions.component.css',
 })
 export class SolutionsComponent {
-  title = input<string>("");
+  solutionsTitle = input<string>("");
   description = input<string>("");
 
   solutions = input<Solutions>([])
