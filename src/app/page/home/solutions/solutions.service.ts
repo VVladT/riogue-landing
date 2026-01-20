@@ -26,7 +26,7 @@ export class SolutionsService {
     {
       name: 'Implementación de sistemas de alarmas',
       description: '',
-      imgUrl: ''
+      imgUrl: `${this.basePath}/instalacion-alarma.jpg`
     },
     {
       name: 'Instalación de racks para sistemas de audio y video',
