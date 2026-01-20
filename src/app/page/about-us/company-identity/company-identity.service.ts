@@ -17,7 +17,7 @@ export class CompanyIdentityService {
     {
       name: 'Visión',
       description: 'Buscamos ser una empresa de referencia, que camina con el cambio de la tecnología y la sociedad, dando a conocer las posibilidades de los estándares y tecnologías libres. Esta labor se debe desempeñar de forma ética y satisfactoria para nosotros, nuestros clientes y el resto de la sociedad',
-      imgUrl: `${this.basePath}/reparacion-de-computadoras.jpeg`,
+      imgUrl: `${this.basePath}/vision.jpg`,
       imgOnRight: true
     },
     {
