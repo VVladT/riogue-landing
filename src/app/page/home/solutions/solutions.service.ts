@@ -5,7 +5,7 @@ import { Solutions } from './solutions.model';
   providedIn: 'root',
 })
 export class SolutionsService {
-  private readonly basePath = "/images/solutions"
+  private readonly basePath = "images/solutions"
 
   private readonly solutions: Solutions = [
     {
