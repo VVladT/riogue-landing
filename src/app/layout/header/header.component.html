@@ -26,12 +26,12 @@
 @if (sidebarOpen()) {
 <nav class="mobile-nav-list">
   <ul class="flex flex-col">
-    <li><a href="#" class="mobile-nav-item">Inicio</a></li>
-    <li><a href="#" class="mobile-nav-item">Servicios</a></li>
-    <li><a href="#" class="mobile-nav-item">Productos</a></li>
-    <li><a href="#" class="mobile-nav-item">Nosotros</a></li>
-    <li><a href="#" class="mobile-nav-item">Certificados</a></li>
-    <li><a href="#" class="mobile-nav-item">Contáctanos</a></li>
+    <li><a [routerLink]="['/']" class="mobile-nav-item">Inicio</a></li>
+    <li><a [routerLink]="['/']" class="mobile-nav-item">Servicios</a></li>
+    <li><a [routerLink]="['/']" class="mobile-nav-item">Productos</a></li>
+    <li><a [routerLink]="['/nosotros']" class="mobile-nav-item">Nosotros</a></li>
+    <li><a [routerLink]="['/']" class="mobile-nav-item">Certificados</a></li>
+    <li><a [routerLink]="['/']" class="mobile-nav-item">Contáctanos</a></li>
   </ul>
 </nav>
 }
