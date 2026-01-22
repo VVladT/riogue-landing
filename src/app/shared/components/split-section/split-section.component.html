@@ -1,16 +1,31 @@
-<div class="flex w-full aspect-[5/2]" [class.flex-row-reverse]="imgOnRight()">
-    <div class="w-1/2">
+<div
+    class="flex relative w-full aspect-[8/6] sm:aspect-[5/2] sm:justify-start justify-center sm:items-stretch"
+    [class.flex-row-reverse]="imgOnRight()"
+>
+    <div class="sm:w-1/2 sm:relative absolute w-full -z-20 h-full">
         <img
             [src]="imgSrc()"
             [alt]="imgAlt()"
-            class="h-full object-cover">
+            class="h-full object-cover sm:opacity-100 opacity-40 filter sm:blur-none blur-xs">
     </div>
 
-    <div class="w-1/2 flex flex-col justify-center items-center text-center gap-2 px-12 bg-white">
+    <div
+        class="sm:w-1/2 flex flex-col justify-center items-center text-center gap-2
+            sm:px-4 px-8 sm:py-0 py-8 sm:bg-white mx-auto
+            self-justify"
+    >
         <h1>
             {{splitSectionTitle()}}
         </h1>
-        <p>
+
+        <span
+            class="sm:hidden absolute inset-0 -z-10
+                bg-white/50
+                blur-lg
+                rounded-full">
+        </span>
+
+        <p class="sm:font-normal font-semibold sm:max-w-md max-w-xs">
             {{description()}}
         </p>
     </div>
