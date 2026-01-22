@@ -5,7 +5,7 @@ import { Brands } from './brands.model'
   providedIn: 'root',
 })
 export class BrandsService {
-  private readonly basePath = '/images/brands'
+  private readonly basePath = 'images/brands'
 
   private readonly brands = [
     'bbva-continental',

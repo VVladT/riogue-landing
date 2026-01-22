@@ -5,7 +5,7 @@ import { CompanyIdentityList } from './company-identity.model';
   providedIn: 'root',
 })
 export class CompanyIdentityService {
-  private readonly basePath = "/images/identity";
+  private readonly basePath = "images/identity";
 
   private readonly identityList: CompanyIdentityList = [
     {
